@@ -1,0 +1,7 @@
+@import url('./_black/header_black.css');
+
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF;
+}

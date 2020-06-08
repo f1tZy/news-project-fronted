@@ -1,0 +1,15 @@
+.saved__keywords {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+    .saved__keywords {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

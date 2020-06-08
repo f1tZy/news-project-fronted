@@ -1,0 +1,20 @@
+@import url(./__articles/saved__articles.css);
+@import url(./__info/saved__info.css);
+@import url(./__keywords/saved__keywords.css);
+
+.saved {
+    color: #1A1B22;
+    padding: 40px 104px 56px;
+}
+
+@media screen and (max-width: 1024px) {
+    .saved {
+        padding: 24px 40px 32px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .saved {
+        padding: 8px 16px 32px;
+    }
+}

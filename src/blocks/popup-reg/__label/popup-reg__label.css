@@ -1,0 +1,11 @@
+.popup-reg__label {
+    display: block;
+    color: #2f71e5;
+    padding: 0;
+    margin: 30px 0 0;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+}

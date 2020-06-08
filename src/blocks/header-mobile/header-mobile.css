@@ -1,0 +1,12 @@
+.header-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 640px) {
+    .header-mobile {
+        display: flex;
+        background-image: url(../../images/menu.svg);
+        min-width: 24px;
+        min-height: 24px;
+    }
+}

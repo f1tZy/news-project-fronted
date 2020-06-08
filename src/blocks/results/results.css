@@ -1,0 +1,26 @@
+@import url(./__title/results__title.css);
+@import url(./__cards-container/results__cards-container.css);
+@import url(./__show-more/results__show-more.css);
+@import url(./_hide/results_hide.css);
+
+.results {
+    position: relative;
+    padding: 80px 104px;
+    background: #F5F6F7;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;   
+}
+
+@media screen and (max-width: 1023px) {
+    .results {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .results {
+        padding: 16px;
+    }
+}

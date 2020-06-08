@@ -1,0 +1,18 @@
+@import url(./__close/popup-succes__close.css);
+@import url(./__content/popup-succes__content.css);
+@import url(./__link/popup-succes__link.css);
+@import url(./__title/popup-succes__title.css);
+@import url(./_is-opened/popup-succes_is-opened.css);
+
+.popup-succes {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+}

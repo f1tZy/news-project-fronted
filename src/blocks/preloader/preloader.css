@@ -1,0 +1,16 @@
+@import url('./__circle/preloader__circle.css');
+@import url('./__loading/preloader__loading.css');
+@import url('./__message/preloader__message.css');
+@import url('./__err/preloader__err.css');
+@import url('./_hide/preloader_hide.css');
+@import url('./__not-found/preloader__not-found.css');
+@import url('./__title/preloader__title.css');
+@import url('./__subtitle/preloader__subtitle.css');
+
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #f5f6f7;
+    position: relative;
+}

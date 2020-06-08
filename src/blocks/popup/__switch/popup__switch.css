@@ -1,0 +1,12 @@
+.popup__switch {
+    display: block;
+    margin: 0;
+    padding: 16px 0 0;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+}

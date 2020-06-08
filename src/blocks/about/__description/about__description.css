@@ -1,0 +1,10 @@
+.about__description {
+    max-width: 600px;
+    padding: 130px 215px 256px 0px;  
+}
+
+@media screen and (max-width: 1024px) {
+    .about__description {
+        padding: 0;
+    }
+}

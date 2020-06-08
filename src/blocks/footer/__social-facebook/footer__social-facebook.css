@@ -1,0 +1,23 @@
+.footer__social-facebook {
+    border-style: none;
+    cursor: pointer;
+}
+
+.footer__social-facebook:hover{
+    opacity: .7;
+    transition: .3s;
+}
+
+@media screen and (max-width: 1023px) {
+    .footer__social-facebook {
+       height: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .footer__social-facebook{
+        position: absolute;
+        top:0px;
+        right: 0px;
+    }
+}

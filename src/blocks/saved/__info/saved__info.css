@@ -1,0 +1,17 @@
+.saved__info {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    margin: 30px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .saved__info {
+        margin: 16px 0;
+        font-size: 30px;
+        line-height: 34px;
+        max-width: 336px;
+    }
+}

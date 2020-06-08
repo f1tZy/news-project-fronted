@@ -1,0 +1,26 @@
+.footer__social-git {
+    margin: 0px 28px 0px 0px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.footer__social-git:hover {
+    opacity: .7;
+    transition: .3s;
+}
+
+@media screen and (max-width: 1023px) {
+    .footer__social-git {
+       margin: 0 24px 0;
+       height: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .footer__social-git{
+        position: absolute;
+        top:0px;
+        right: 65px;
+        margin: 0;
+    }
+}

@@ -1,0 +1,18 @@
+.results__cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    justify-items: center;
+}
+
+@media screen and (max-width: 1023px) {
+    .results__cards-container {
+        grid-gap: 8px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .results__cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,18 @@
+@import url(./__section/root__section.css);
+@import url(./_black/root_black.css);
+
+.root {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1023px) {
+    .root{
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .root {
+        max-width: 640px;
+    }
+}

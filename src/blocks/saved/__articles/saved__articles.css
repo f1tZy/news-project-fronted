@@ -1,0 +1,21 @@
+.saved__articles {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(26, 27, 34, 0.5);
+    margin: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+    .saved__articles {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .saved__articles {
+        font-size: 12px;
+    }
+}

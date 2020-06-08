@@ -1,0 +1,24 @@
+@import url(./__button/popup-reg__button.css);
+@import url(./__close/popup-reg__close.css);
+@import url(./__content/popup-reg__content.css);
+@import url(./__form/popup-reg__form.css);
+@import url(./__input/popup-reg__input.css);
+@import url(./__label/popup-reg__label.css);
+@import url(./__link/popup-reg__link.css);
+@import url(./__switch/popup-reg__switch.css);
+@import url(./__title/popup-reg__title.css);
+@import url(./_is-opened/popup-reg_is-opened.css);
+@import url(./error/error.css);
+
+.popup-reg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}

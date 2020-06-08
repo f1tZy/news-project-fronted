@@ -1,0 +1,25 @@
+.footer__content-main {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: #1A1B22;
+    cursor: pointer;
+}
+
+.footer__content-main:hover {
+    opacity: .7;
+    transition: .3s;
+}
+
+@media screen and (max-width: 640px) {
+    .footer__content-main{
+        position: absolute;
+        top:0px;
+        left: 0px;
+        margin: 0;
+    }
+}

@@ -1,0 +1,18 @@
+.root__section {
+    display: flex;
+    padding: 0px 104px;
+    justify-content: space-between;
+    margin:0px;
+}
+
+@media screen and (max-width: 1023px) {
+    .root__section {
+        padding: 0px 40px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .root__section {
+        padding: 0 16px;
+    }
+}

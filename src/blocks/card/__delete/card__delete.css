@@ -1,0 +1,27 @@
+@import url(./_delete/card__icon_delete.css);
+
+.card__delete {
+    position: absolute;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    top: 24px;
+    right: 24px;
+    background-image: url(../../../images/del-icon/grey.svg);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .card__delete {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .card__delete {
+        top: 16px;
+        right: 16px;
+    }
+}

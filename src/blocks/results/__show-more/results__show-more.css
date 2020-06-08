@@ -1,0 +1,34 @@
+.results__show-more {
+    display: block;
+    font-weight: 500;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    color: #1A1B22;
+    background-color: #FFFFFF;
+    width: 288px;
+    height: 64px;
+    margin: 64px auto 0px;
+    outline: none;
+}
+
+.results__show-more:hover {
+    opacity: .9;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .results__show-more {
+        margin: 22px auto 0px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .results__show-more {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

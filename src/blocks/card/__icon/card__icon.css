@@ -1,0 +1,29 @@
+.card__icon {
+    position: absolute;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    top: 24px;
+    right: 24px;
+    background-image: url(../../../images/save-icon/grey.svg);
+}
+
+.card__icon.card__icon:hover {
+    cursor: pointer;
+    background-image: url(../../../images//save-icon/black.svg);
+}
+
+@media screen and (max-width: 1024px) {
+    .card__icon {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .card__icon {
+        top: 27px;
+        right: 27px;
+    }
+}
