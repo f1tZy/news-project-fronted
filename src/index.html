@@ -7,9 +7,8 @@
     <meta name="author" content="Alexey Chernyshev">
     <meta name="description" content="Сайт поиска новостей">
     <title>News Project</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./vendor/normalize.css">
-    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="icon" href="<%=require('./images/favicon.png').default%>">
 </head>
 <body>
     <div class="root">
@@ -19,13 +18,13 @@
                 <h2 class="header-title">NewsExplorer</h2>
                 <!-- Для просмотра мобильного меню добавить класс header-menu_mobile -->
                 <nav class="header-menu">
-                    <a class="header-menu__main active-button" href="#">Главная</a>
+                    <a class="header-menu__main active-button" href="./index.html">Главная</a>
                     <!-- Для отображения ссылки сохраненых статей убрать класс header-menu_hide -->
-                    <a class="header-menu__saved header-menu_hide" href="#">Сохранённые статьи</a>
+                    <a class="header-menu__saved header-menu_hide" href="./second/index.html">Сохранённые статьи</a>
                     <button class="button header-menu__button">
                         <span class="header-menu__auth">Авторизоваться</span>
                         <!-- Для отображения значка выхода убрать класс header-menu_hide -->
-                        <img class="header-menu__unauth header-menu_hide" src="images/out_white.svg" alt="Выйти">
+                        <img class="header-menu__unauth header-menu_hide" src="<%=require('./images/out_white.svg').default%>" alt="Выйти">
                     </button>
                 </nav>
                 <div class="header-mobile"></div>
@@ -48,20 +47,20 @@
             </div>
             <!-- Для отображения ошибки прелоудера убрать класс preloader_hide -->
             <div class="preloader__err preloader_hide">
-                <img class="preloader__not-found" src="./images/not-found.svg" alt="Ничего не найдено">
+                <img class="preloader__not-found" src="<%=require('./images/not-found.svg').default%>" alt="Ничего не найдено">
                 <h2 class="preloader__title">Ничего не найдено</h2>
                 <h3 class="preloader__subtitle">К сожалению по вашему запросу ничего не найдено</h3>
             </div>
         </section>
         <!-- Для отображения блока с картинками убрать класс results_hide -->
-        <section class="results">
+        <section class="results results_hide">
             <h3 class="results__title">Результаты поиска</h3>
             <div class="results__cards-container">
                 <div class="card">
                     <!-- Смену иконки на синий цвет сделаю через js -->
                     <div class="card__icon"></div>
                     <p class="card__save">Войдите, чтобы сохранять статьи</p>
-                    <img class="card__img" src="images/image_1.jpg" alt="Изображение карточки">
+                    <img class="card__img" src="<%=require('./images/image_1.jpg').default%>" alt="Изображение карточки">
                     <div class="card__info">
                         <p class="card__date">2 августа, 2019</p>
                         <h2 class="card__title">Национальное достояние – парки</h2>
@@ -72,7 +71,7 @@
                 <div class="card">
                     <div class="card__icon"></div>
                     <p class="card__save">Войдите, чтобы сохранять статьи</p>
-                    <img class="card__img" src="images/image_2.png" alt="Изображение карточки">
+                    <img class="card__img" src="<%=require('./images/image_2.png').default%>" alt="Изображение карточки">
                     <div class="card__info">
                         <p class="card__date">2 августа, 2019</p>
                         <h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
@@ -83,7 +82,7 @@
                 <div class="card">
                     <div class="card__icon"></div>
                     <p class="card__save">Войдите, чтобы сохранять статьи</p>
-                    <img class="card__img" src="images/image_3.png" alt="Изображение карточки">
+                    <img class="card__img" src="<%=require('./images/image_3.png').default%>" alt="Изображение карточки">
                     <div class="card__info">
                         <p class="card__date">2 августа, 2019</p>
                         <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
@@ -95,7 +94,7 @@
             <button class="button results__show-more">Показать ещё</button>
         </section>
         <section class="about">
-            <img class="about__photo" src="./images/image_4.png" alt="author photo">
+            <img class="about__photo" src="<%=require('./images/image_4.png').default%>" alt="author photo">
             <div class="about__description">
                 <h2 class="about__title">Об авторе</h2>
                 <p class="about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
@@ -105,7 +104,7 @@
         <!-- Для отображения попапа добавить класс popup_is-opened -->
         <div class="popup">
             <div class="popup__content">
-              <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+              <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup__close">
               <h3 class="popup__title">Вход</h3>
               <form class="popup__form" name="new">
                   <label class="popup__label">Email</label>
@@ -124,7 +123,7 @@
         <!-- Для отображения попапа добавить класс popup-reg_is-opened -->
         <div class="popup-reg">
             <div class="popup-reg__content">
-              <img src="./images/close.svg" alt="Закрыть" class="popup-reg__close">
+              <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup-reg__close">
               <h3 class="popup-reg__title">Регистрация</h3>
               <form class="popup-reg__form" name="new">
                   <label class="popup-reg__label">Email</label>
@@ -146,7 +145,7 @@
           <!-- Для отображения попапа добавить класс popup-succes_is-opened -->
           <div class="popup-succes">
             <div class="popup-succes__content">
-              <img src="./images/close.svg" alt="Закрыть" class="popup-succes__close">
+              <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup-succes__close">
               <h3 class="popup-succes__title">Пользователь успешно зарегистрирован!</h3>
               <a class="popup-succes__link" href="#">Выполнить вход</a>
             </div>
@@ -155,12 +154,13 @@
     <footer class="footer">
         <p class="footer__copyright">&COPY; 2020 Supersite, Powered by News API</p>
         <nav class="footer__content">
-            <a class="footer__content-main" href="#">Главная</a>
+            <a class="footer__content-main" href="./index.html">Главная</a>
             <a class="footer__content-ya" href="http://praktikum.yandex.ru">Яндекс.Практикум</a>
-            <a href="https://github.com/f1tZy"><img class=footer__social-git src="./images/github.png" alt="github"></a>
-            <a href="#"><img class=footer__social-facebook src="./images/fb.png" alt="facebook"></a>
+            <a href="https://github.com/f1tZy"><img class=footer__social-git src="<%=require('./images/github.png').default%>" alt="github"></a>
+            <a href="#"><img class=footer__social-facebook src="<%=require('./images/fb.png').default%>" alt="facebook"></a>
         </nav>
     </footer>
 </div>
+<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

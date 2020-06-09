@@ -1,5 +1,7 @@
 # news-project-fronted
 
+## Ссылка на gh-pages: https://f1tzy.github.io/news-project-fronted/
+
 Версия проекта: v 0.0.1
 
 ## Описание:

@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-underscore-dangle": ["error", { "allowAfterThis": true, "allow": ["_id"] }],
+    "no-console": "off",
+    "class-methods-use-this": ["error", { "exceptMethods": ["_makeContentForDOM"] }],
+    "import/no-cycle": [2, { "maxDepth": 1 }],
+    "no-return-assign": ["error", "except-parens"],
+    "max-len": ["error", { "code": 120 }],
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": false,
+        "object": true
+      }
+    ],
+    "operator-linebreak": ["error", "after"]
+  },
+  "env": {
+    "browser": true
+  }
+}
