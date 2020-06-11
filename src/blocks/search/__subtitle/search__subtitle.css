@@ -1,7 +1,7 @@
 .search__subtitle {
     max-width: 545px;
     margin: 64px 0px 32px;
-    font-family: Roboto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -17,7 +17,6 @@
 
 @media screen and (max-width: 640px) {
     .search__subtitle {
-        font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;

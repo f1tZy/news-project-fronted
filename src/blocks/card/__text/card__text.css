@@ -1,5 +1,5 @@
 .card__text {
-    font-family: Roboto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 640px) {
     .card__text {
-        font-family: Roboto;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;

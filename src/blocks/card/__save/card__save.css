@@ -3,7 +3,7 @@
 }
 
 .card__icon:hover ~ .card__save {
-    font-family: Roboto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
@@ -24,7 +24,7 @@
   }
   
 .card__delete:hover ~ .card__save {
-    font-family: Roboto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 10px;

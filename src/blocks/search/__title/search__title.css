@@ -1,5 +1,5 @@
 .search__title {
-    font-family: Roboto Slab;
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 60px;
@@ -19,7 +19,6 @@
 
 @media screen and (max-width: 640px) {
     .search__title {
-        font-family: Roboto Slab;
         font-style: normal;
         font-weight: normal;
         font-size: 36px;

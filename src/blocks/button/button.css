@@ -1,7 +1,7 @@
 @import url('./_black/button_black.css');
 
 .button {
-    font-family: Roboto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
