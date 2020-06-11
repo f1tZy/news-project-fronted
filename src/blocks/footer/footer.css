@@ -1,9 +1,10 @@
-@import url('./__copyright/footer__copyright.css');
-@import url('./__content-main/footer__content-main.css');
-@import url('./__social-facebook/footer__social-facebook.css');
-@import url('./__social-git/footer__social-git.css');
-@import url('./__content-ya/footer__content-ya.css');
-@import url('./__content/footer__content.css');
+@import url(./__copyright/footer__copyright.css);
+@import url(./__content-main/footer__content-main.css);
+@import url(./__social-facebook/footer__social-facebook.css);
+@import url(./__social-git/footer__social-git.css);
+@import url(./__content-ya/footer__content-ya.css);
+@import url(./__content/footer__content.css);
+@import url(./__content-item/footer__content-item.css);
 
 .footer {
     display: flex;

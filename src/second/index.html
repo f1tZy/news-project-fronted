@@ -27,7 +27,7 @@
                     <li class="header-menu__item"><button class="button button_black header-menu__button">
                             <span class="header-menu__auth header-menu_black">Грета</span>
                             <!-- Для отображения значка выхода убрать класс header-menu_hide -->
-                            <img class="header-menu__unauth header-menu_hide"
+                            <img class="header-menu__unauth"
                                 src=".<%=require('../images/out_black.svg').default%>" alt="Выйти">
                         </button></li>
                 </ul>
@@ -120,14 +120,16 @@
             </section>
         </main>
         <footer class="footer">
-            <p class="footer__copyright">&COPY; 2020 Supersite, Powered by News API</p>
-            <nav class="footer__content">
-                <a class="footer__content-main" href="../index.html">Главная</a>
-                <a class="footer__content-ya" href="http://praktikum.yandex.ru">Яндекс.Практикум</a>
-                <a href="https://github.com/f1tZy"><img class=footer__social-git
-                        src=".<%=require('../images/github.png').default%>" alt="github"></a>
-                <a href="#"><img class=footer__social-facebook src=".<%=require('../images/fb.png').default%>"
-                        alt="facebook"></a>
+            <h2 class="footer__copyright">&COPY; 2020 Supersite, Powered by News API</h2>
+            <nav>
+                <ul class="footer__content">
+                <li class="footer__content-item"><a class="footer__content-main" href="../index.html">Главная</a></li>
+                <li class="footer__content-item"><a class="footer__content-ya" href="http://praktikum.yandex.ru">Яндекс.Практикум</a></li>
+                <li class="footer__content-item"><a href="https://github.com/f1tZy"><img class=footer__social-git
+                        src=".<%=require('../images/github.png').default%>" alt="github"></a></li>
+                        <li class="footer__content-item"><a href="#"><img class=footer__social-facebook src=".<%=require('../images/fb.png').default%>"
+                        alt="facebook"></a></li>
+                    </ul>
             </nav>
         </footer>
     </div>
