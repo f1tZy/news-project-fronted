@@ -1,0 +1,26 @@
+.header-menu__button {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 12px;
+    right: 0px;
+    margin: 30px 0px 0px;
+    display: flex;
+    outline: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .header-menu__button {
+        margin: 12px 0;
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header-menu__button {
+        margin: 30px 0 0;
+    }
+}

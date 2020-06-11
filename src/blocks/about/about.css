@@ -8,6 +8,7 @@
     background: #FFFFFF;
     justify-content: center;
     margin: 0 auto;
+    padding: 80px 104px;
 }
 
 @media screen and (max-width: 1024px) {

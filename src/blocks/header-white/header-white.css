@@ -1,13 +1,14 @@
 @import url(./__button/header-menu__button.css);
+@import url(./__item/header-menu__item.css);
 @import url(./__main/header-menu__main.css);
 @import url(./__saved/header-menu__saved.css);
 @import url(./__unauth/header-menu__unauth.css);
+@import url(./_black/header-menu_black.css);
 @import url(./_hide/header-menu_hide.css);
 @import url(./_mobile/header-menu_mobile.css);
-@import url(./_black/header-menu_black.css);
-@import url(./__item/header-menu__item.css);
 
-.header-menu {
+
+.header-white {
     display: flex;
     right:0px;
     margin:0px;
@@ -16,12 +17,12 @@
 }
 
 @media screen and (max-width: 640px) {
-    .header-menu {
+    .header-white {
         display: none;
         position: absolute;
         top:56px;
         left: 0px;
-        background: #1A1B22;
+        background: #fff;
         z-index: 10;
         padding: 16px;
         border-top: 1px solid #FFFFFF;

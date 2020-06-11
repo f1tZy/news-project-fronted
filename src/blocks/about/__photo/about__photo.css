@@ -1,13 +1,13 @@
 .about__photo {
-    max-width: 100%;
-    margin: 80px 56px 80px 104px;
+    max-width: 464px;
+    margin: 0px 56px 0px 0px;
     border-radius: 50%;
 }
 
 @media screen and (max-width: 1024px) {
     .about__photo {
-        max-width: 232px;
-        max-height: 232px;
+        width: 232px;
+        height: 232px;
         margin: 20px 32px 20px 0px;
     }
 }
@@ -15,5 +15,7 @@
 @media screen and (max-width: 640px) {
     .about__photo {
         margin: 0px auto;
+        width: 272px;
+        height: 272px;
     }
 }

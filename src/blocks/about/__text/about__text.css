@@ -13,3 +13,10 @@
         margin: 16px 0 24px;
     }
 }
+
+@media screen and (max-width: 640px) {
+    .about__text {
+        max-width: 290px;
+        margin: 16px 0 0px;
+    }
+}

@@ -4,15 +4,3 @@
 .root {
     color: #ffffff;
 }
-
-@media screen and (max-width: 1023px) {
-    .root{
-        max-width: 768px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .root {
-        max-width: 640px;
-    }
-}

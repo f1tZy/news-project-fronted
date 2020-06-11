@@ -1,0 +1,24 @@
+.header-menu__main {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 42px 0px 0px;
+    margin: 0 32px 0 0;
+}
+
+.header-menu__main:hover {
+    opacity: .7;
+    transition: .3s;
+}
+
+@media screen and (max-width: 1024px) {
+    .header-menu__main {
+        padding: 20px 0 0;
+        font-size: 16px;
+        margin: 0 16px 0 0;
+    }
+}
