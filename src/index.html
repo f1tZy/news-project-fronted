@@ -63,7 +63,7 @@
                 </div>
             </section>
             <!-- Для отображения блока с картинками убрать класс results_hide -->
-            <section class="results results_hide">
+            <section class="results">
                 <h3 class="results__title">Результаты поиска</h3>
                 <div class="results__cards-container">
                     <div class="card">
@@ -126,7 +126,7 @@
                 <div class="popup__content">
                     <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup__close">
                     <h3 class="popup__title">Вход</h3>
-                    <form class="popup__form" name="new">
+                    <form class="popup__form" name="login">
                         <label class="popup__label">Email</label>
                         <input type="email" name="email" class="popup__input" placeholder="Введите почту" required
                             minlength="2" maxlength="30">
@@ -147,7 +147,7 @@
                 <div class="popup-reg__content">
                     <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup-reg__close">
                     <h3 class="popup-reg__title">Регистрация</h3>
-                    <form class="popup-reg__form" name="new">
+                    <form class="popup-reg__form" name="reg">
                         <label class="popup-reg__label">Email</label>
                         <input type="email" name="email" class="popup-reg__input" placeholder="Введите почту" required
                             minlength="2">
@@ -157,7 +157,7 @@
                             required minlength="8">
                         <span class="error error-pass"></span>
                         <label class="popup-reg__label">Имя</label>
-                        <input type="text" name="pass" class="popup-reg__input" placeholder="Введите своё имя" required
+                        <input type="text" name="name" class="popup-reg__input" placeholder="Введите своё имя" required
                             minlength="2" maxlength="30">
                         <span class="error error-name"></span>
                         <button class="button popup-reg__button popup-reg__button_disabled"
@@ -194,6 +194,7 @@
         </footer>
     </div>
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <script type="module" src="js/FormValidator.js"></script>
 </body>
 
 </html>

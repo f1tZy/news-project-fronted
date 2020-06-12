@@ -9,6 +9,7 @@
 
 ## Инструкция как развернуть проект:
 
+```sh
 npm install - установить зависимости.
 
 npm run build - собирает webpack в отдельную папку dist.
@@ -16,3 +17,4 @@ npm run build - собирает webpack в отдельную папку dist.
 npm run dev - собирает webpack в отдельную папку dist и открывает сайт в отдельной вкладке.
 
 npm run deploy - пушит проект в ветку gh-pages.
+```

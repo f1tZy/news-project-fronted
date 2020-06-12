@@ -1,12 +1,50 @@
 {
   "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
   "rules": {
-    "no-underscore-dangle": ["error", { "allowAfterThis": true, "allow": ["_id"] }],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allowAfterThis": true,
+        "allow": [
+          "_id"
+        ]
+      }
+    ],
     "no-console": "off",
-    "class-methods-use-this": ["error", { "exceptMethods": ["_makeContentForDOM"] }],
-    "import/no-cycle": [2, { "maxDepth": 1 }],
-    "no-return-assign": ["error", "except-parens"],
-    "max-len": ["error", { "code": 120 }],
+    "class-methods-use-this": [
+      "error",
+      {
+        "exceptMethods": [
+          "_makeContentForDOM"
+        ]
+      }
+    ],
+    "import/no-cycle": [
+      2,
+      {
+        "maxDepth": 1
+      }
+    ],
+    "no-return-assign": [
+      "error",
+      "except-parens"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 200
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
     "prefer-destructuring": [
       "error",
       {
@@ -14,9 +52,17 @@
         "object": true
       }
     ],
-    "operator-linebreak": ["error", "after"]
+    "operator-linebreak": [
+      "error",
+      "after"
+    ]
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
   }
 }

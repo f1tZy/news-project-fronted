@@ -1,14 +1,13 @@
 .results__cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 16px;
     justify-items: center;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 641px) and (max-width: 767px) {
     .results__cards-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 8px;
+        grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
     }
 }
 
