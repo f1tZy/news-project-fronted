@@ -4,33 +4,27 @@
 
 import './index.css';
 import './vendor/normalize.css';
-import FormValidator from './js/FormValidator';
+import Popup from './js/components/Popup';
+import Header from './js/components/Header';
 
-const loginForm = document.forms.login;// форма карточки
-const inputLoginEmail = loginForm.elements.email;
-const inputLoginPass = loginForm.elements.pass;
-const loginBtn = document.querySelector('.popup__button');
+const loginbtn = document.querySelector('.header-menu__auth');
+const popup1 = document.querySelector('.popup');
 
 
-const regForm = document.forms.reg;// форма пользователя
-const inputRegMail = regForm.elements.email;// инпуты форм для валидатора
-const inputRegPass = regForm.elements.pass;
-// const inputNameReg = regForm.elements.name;
-const regBtn = document.querySelector('.popup-reg__button');
+popup = new Popup(popup1, [{
+  event: 'mousedown',
+  callback: (event) => {
+    if (event.target.classList.contains('popup') || event.target.classList.contains('popup__close')) {
+      popup.close();
+    }
+  },
+}]);
 
-const validator = new FormValidator();
-const words = {
-  validationLenght: 'Должно быть от 2 до 30 символов',
-  strictly: 'Это обязательное поле',
-  link: 'Здесь должна быть ссылка',
-};
-
-function setEventListeners() {
-  loginForm.addEventListener('input', () => {
-    validator.setSubmitButtonStateLogin(inputLoginEmail, inputLoginPass, loginBtn, words);
-  });
-  regForm.addEventListener('input', () => {
-    validator.setSubmitButtonStateReg(inputRegMail, inputRegPass, regBtn, words);
-  });
-}
-setEventListeners();
+header = new Header('.header', [{
+  event: 'click',
+  callback: (event) => {
+    if (event.target.classList.contains('header-menu__button')) {
+      popup.open();
+    }
+  },
+}]);
