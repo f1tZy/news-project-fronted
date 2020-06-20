@@ -7,7 +7,7 @@
 @import url(./__link/popup-reg__link.css);
 @import url(./__switch/popup-reg__switch.css);
 @import url(./__title/popup-reg__title.css);
-@import url(./_is-opened/popup-reg_is-opened.css);
+@import url(./_is-opened/popup_is-opened.css);
 @import url(./error/error.css);
 
 .popup-reg {

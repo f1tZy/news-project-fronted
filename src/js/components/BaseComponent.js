@@ -1,4 +1,5 @@
 /* eslint linebreak-style: ["error", "windows"] */
+
 export default class BaseComponent {
   constructor(selector, eventHandlers) {
     this._element = document.querySelector(selector);

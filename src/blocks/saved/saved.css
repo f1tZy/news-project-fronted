@@ -1,6 +1,7 @@
 @import url(./__articles/saved__articles.css);
 @import url(./__info/saved__info.css);
 @import url(./__keywords/saved__keywords.css);
+@import url(./__bold/saved__bold.css);
 
 .saved {
     color: #1A1B22;
