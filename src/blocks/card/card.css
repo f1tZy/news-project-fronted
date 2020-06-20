@@ -8,6 +8,8 @@
 @import url(./__source/card__source.css);
 @import url(./__category/card__category.css);
 @import url(./__delete/card__delete.css);
+@import url(./__keyword/card__keyword.css);
+@import url(./__icon_save/card__icon_save.css);
 
 .card {
     display: flex;

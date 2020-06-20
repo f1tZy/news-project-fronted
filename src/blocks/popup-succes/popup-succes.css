@@ -2,7 +2,7 @@
 @import url(./__content/popup-succes__content.css);
 @import url(./__link/popup-succes__link.css);
 @import url(./__title/popup-succes__title.css);
-@import url(./_is-opened/popup-succes_is-opened.css);
+@import url(./_is-opened/popup_is-opened.css);
 
 .popup-succes {
         position: fixed;
