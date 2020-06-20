@@ -1,10 +1,9 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import displayKeywords from './displayKeywords';
 
-export default function renderInfo(mainApi, CardList) {
+export default function renderInfo(mainApi) {
   mainApi.getUserData()
     .then((data) => {
-      console.log(data);
       const { name } = data.data;
       return mainApi.getArticles()
         .then((articles) => {
@@ -20,7 +19,6 @@ export default function renderInfo(mainApi, CardList) {
           const nextKeywords = keywords.slice(2, keywords.length);
 
           displayKeywords(allKeywords, firstTwo, nextKeywords);
-          CardList.renderSavedArticles(articles.data);
         })
         .catch((err) => {
           console.log(err);

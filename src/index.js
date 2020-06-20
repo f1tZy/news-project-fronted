@@ -10,18 +10,25 @@ import MainApi from './js/api/MainApi';
 import { MainApiUrl, NewApiKey, NewsApiUrl } from './js/constants/settings';
 import Header from './js/components/Header';
 import checkUser from './js/utils/checkUser';
-import setEventListeners from './js/utils/setEventListeners';
 import Card from './js/components/Card';
 import checkAuth from './js/utils/checkAuth';
 import NewsApi from './js/api/NewsApi';
 import NewsCardList from './js/components/NewCardList';
-import SearchForm from './js/components/SearchForm';
 import {
   searchErr, searchBtn, searchInput, preloaderErr, preloaderLoading, preloaderTitle, preloaderSubtitle, results, showMoreBtn, headerBlock,
-  headerMenu,
+  headerMenu, loginBtn, regBtn,
 } from './js/constants/documentSelectors';
 import customPopup from './js/utils/customPopup';
 import takeData from './js/utils/takeDataFromCard';
+import popupsCloseOnEsc from './js/utils/closeOnEsc';
+import disableButton from './js/utils/disableButton';
+import enableButton from './js/utils/enableButton';
+import NewFormsValidator from './js/components/Form';
+
+const messages = {
+  strictly: 'Это обязательное поле',
+  email: 'e-mail в формате: students-yandex@yandex.ru',
+};
 
 // запрос на news.api
 const newsApi = new NewsApi({
@@ -29,10 +36,38 @@ const newsApi = new NewsApi({
   key: NewApiKey,
   headers: {},
 });
+
+// для отрисовки карточки
 const card = new Card();
 
+// валидация логина
+const validatePopupLogin = new NewFormsValidator('.popup__form', enableButton, disableButton, [
+  {
+    event: 'input',
+    callback: (e) => {
+      if (e.target.classList.contains('popup__input')) {
+        const inputs = e.target.parentNode.getElementsByTagName('input');
+        validatePopupLogin.validateForm(inputs, messages, loginBtn);
+      }
+    },
+  },
+]);
+
+// валидация регистрации
+const validatePopupReg = new NewFormsValidator('.popup-reg__form', enableButton, disableButton, [
+  {
+    event: 'input',
+    callback: (e) => {
+      if (e.target.classList.contains('popup-reg__input')) {
+        const inputs = e.target.parentNode.getElementsByTagName('input');
+        validatePopupReg.validateForm(inputs, messages, regBtn);
+      }
+    },
+  },
+]);
+
 // работа с формой поиска
-const searchForm = new SearchForm('.search__form', [
+const searchForm = new NewFormsValidator('.search__form', enableButton, disableButton, [
   {
     event: 'submit',
     callback: (e) => {
@@ -75,7 +110,7 @@ const searchForm = new SearchForm('.search__form', [
   {
     event: 'input',
     callback: (e) => {
-      if (SearchForm.elementValid(e.target)) {
+      if (NewFormsValidator.elementValid(e.target)) {
         searchBtn.removeAttribute('disabled');
         searchErr.style.display = 'none';
       } else {
@@ -88,7 +123,7 @@ const searchForm = new SearchForm('.search__form', [
     event: 'click',
     callback: (e) => {
       if (e.target.classList.contains('search__button')) {
-        if (SearchForm.elementValid(searchInput)) {
+        if (NewFormsValidator.elementValid(searchInput)) {
           searchBtn.removeAttribute('disabled');
           searchErr.style.display = 'none';
         } else {
@@ -162,7 +197,8 @@ const header = new Header('.header', [
       if (e.target.classList.contains('header-menu__button') || e.target.parentNode.classList.contains('header-menu__button')) {
         if (!localStorage.getItem('jwt')) {
           popupLogin.open(e);
-          Popup.clearContent(document.forms.login);
+          NewFormsValidator.clearContent(document.forms.login);
+          disableButton(loginBtn);
         } else {
           localStorage.removeItem('jwt');
           checkUser(header, mainApi);
@@ -194,8 +230,8 @@ const popupReg = new Popup('.popup-reg', [
       if (e.target.classList.contains('popup-reg__link')) {
         popupReg.close(e);
         popupLogin.open(e);
-        Popup.clearContent(document.forms.login);
-        Popup.clearContent(document.forms.reg);
+        NewFormsValidator.clearContent(document.forms.login);
+        NewFormsValidator.clearContent(document.forms.reg);
       }
     },
   },
@@ -212,7 +248,11 @@ const popupReg = new Popup('.popup-reg', [
             popupSucces.open();
           })
           .catch((err) => {
-            console.log(err);
+            if (err === 409) {
+              customPopup('Такой пользователь уже существует!');
+            } else {
+              customPopup('Ошибка сервера :(');
+            }
           });
       }
     },
@@ -230,7 +270,7 @@ const popupLogin = new Popup('.popup', [
       if (e.target.classList.contains('popup__link')) {
         popupReg.open(e);
         popupLogin.close(e);
-        Popup.clearContent(document.forms.login);
+        NewFormsValidator.clearContent(document.forms.login);
       }
     },
   },
@@ -269,7 +309,7 @@ const popupSucces = new Popup('.popup-succes', [{
     if (e.target.classList.contains('popup-succes__link')) {
       popupLogin.open(e);
       popupSucces.close(e);
-      Popup.clearContent(document.forms.login);
+      NewFormsValidator.clearContent(document.forms.login);
     }
   },
 }]);
@@ -277,8 +317,8 @@ const popupSucces = new Popup('.popup-succes', [{
 // проверяем при загрузке залогинен ли пользователь
 checkUser(header, mainApi);
 
-// вызываем функцию слушателей для валидации полей
-setEventListeners();
-
 // убираем уведомление что требуется регистрация
 checkAuth();
+
+// закрытие попапов на ESC
+popupsCloseOnEsc(popupLogin, popupReg, popupSucces);

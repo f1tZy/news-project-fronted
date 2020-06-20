@@ -1,5 +1,7 @@
 /* eslint linebreak-style: ["error", "windows"] */
 
+import { daysInWeek } from '../constants/magicValues';
+
 export default class NewsApi {
   constructor(settings) {
     this._baseUrl = settings.baseUrl;
@@ -10,7 +12,7 @@ export default class NewsApi {
   getNews(keyword) {
     const to = new Date();
     const from = new Date();
-    from.setDate(to.getDate() - 7);
+    from.setDate(to.getDate() - daysInWeek);
     return fetch(`${this._baseUrl}/everything?q=${keyword}&apiKey=${this._key}&from=${from.getFullYear()}-${from.getMonth() + 1}-${from.getDate()}&to=${to.getFullYear()}-${to.getMonth() + 1}-${to.getDate()}&pageSize=100`, {
       method: 'GET',
       headers: this._headers,

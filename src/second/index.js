@@ -13,6 +13,7 @@ import Card from '../js/components/Card';
 import checkUser from '../js/utils/checkUser';
 import openMobileMenu from '../js/utils/renderMobileMenuFor2page';
 import renderInfo from '../js/utils/renderInfoFor2page';
+import renderSavedArticles from '../js/utils/renderArticlesFor2page';
 
 const mainApi = new MainApi({
   mainUrl: MainApiUrl,
@@ -56,7 +57,7 @@ const cardList = new NewsCardList('.results', card, null, [
         mainApi.removeArticle(id)
           .then(() => {
             targetCard.parentNode.removeChild(e.target.closest('.card'));
-            document.querySelector('.saved__info').innerHTML = document.querySelector('.saved__info').innerHTML;
+            renderInfo(mainApi, cardList);
           })
           .catch((err) => {
             console.log(err);
@@ -66,7 +67,11 @@ const cardList = new NewsCardList('.results', card, null, [
   },
 ]);
 
-renderInfo(mainApi, cardList);
+// отрисововаем инфу пользователя
+renderInfo(mainApi);
+
+// рендерим карточки
+renderSavedArticles(mainApi, cardList);
 
 // проверяем имеет ли доступ пользователь к странице
 function checkAccess() {
@@ -77,4 +82,4 @@ function checkAccess() {
     window.location.href = '../';
   }
 }
-checkAccess(mainApi);
+checkAccess();

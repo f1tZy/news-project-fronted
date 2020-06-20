@@ -1,16 +1,7 @@
 /* eslint linebreak-style: ["error", "windows"] */
 
 // блок форм и инпутов
-const loginForm = document.forms.login;// форма карточки
-const inputLoginEmail = document.forms.login.elements.email;
-const inputLoginPass = document.forms.login.elements.pass;
 const loginBtn = document.querySelector('.popup__button');
-
-
-const regForm = document.forms.reg;// форма пользователя
-const inputRegMail = document.forms.reg.elements.emailReg;// инпуты форм для валидатора
-const inputRegPass = document.forms.reg.elements.passReg;
-const inputNameReg = document.forms.reg.elements.username;
 const regBtn = document.querySelector('.popup-reg__button');
 
 // блок поиска
@@ -36,14 +27,7 @@ const headerBlock = document.querySelector('.header');
 const headerMenu = document.querySelector('.header-menu');
 
 export {
-  loginForm,
-  inputLoginEmail,
-  inputLoginPass,
   loginBtn,
-  regForm,
-  inputRegMail,
-  inputRegPass,
-  inputNameReg,
   regBtn,
   searchErr,
   searchBtn,
