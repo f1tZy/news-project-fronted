@@ -1,7 +1,24 @@
 /* eslint linebreak-style: ["error", "windows"] */
 export default class Card {
-  constructor() {
+  constructor(mainApi) {
     this._el = document.querySelector('.results__cards-container');
+    this.mainApi = mainApi;
+    this.savedCards = [];
+  }
+
+  takeSavedCards() {
+    if (localStorage.getItem('jwt')) {
+      this.mainApi.getArticles()
+        .then((articles) => {
+          articles.data.forEach((element) => {
+            this.savedCards.push(element);
+          });
+        });
+    }
+  }
+
+  clearSavedCards() {
+    this.savedCards = [];
   }
 
   create(data) {
@@ -30,6 +47,16 @@ export default class Card {
 
     const date = new Date(data.date);
     this._el.querySelector('.card__date').textContent = `${date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' })}, ${date.getFullYear()}`;
+
+    // перебираем массив с сохраненным карточками, если есть совпадения в ссылках, меняем иконку и добавляем id для возможности удаления(так пользователь не сможет добавить 2 одинаковые карточки)
+    this.savedCards.forEach((e) => {
+      if (this._el.querySelector('.card__source').href === e.link) {
+        const cardIcon = this._el.querySelector('.card__icon');
+        cardIcon.classList.remove('card__icon');
+        cardIcon.classList.add('card__icon_save');
+        this._el.querySelector('.card__id').textContent = e._id;
+      }
+    });
 
     return this._el;
   }

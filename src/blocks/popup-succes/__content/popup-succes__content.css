@@ -10,6 +10,6 @@
 
 @media screen and (max-width: 540px) {
   .popup-succes__content {
-    height: 560px;
+    height: 200px;
   }
 }

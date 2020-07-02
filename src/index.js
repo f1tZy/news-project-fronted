@@ -16,7 +16,7 @@ import NewsApi from './js/api/NewsApi';
 import NewsCardList from './js/components/NewCardList';
 import {
   searchErr, searchBtn, searchInput, preloaderErr, preloaderLoading, preloaderTitle, preloaderSubtitle, results, showMoreBtn, headerBlock,
-  headerMenu, loginBtn, regBtn,
+  headerMenu, loginBtn, regBtn, cardsContainer,
 } from './js/constants/documentSelectors';
 import customPopup from './js/utils/customPopup';
 import takeData from './js/utils/takeDataFromCard';
@@ -37,8 +37,16 @@ const newsApi = new NewsApi({
   headers: {},
 });
 
+// запрос на сервер c бд
+const mainApi = new MainApi({
+  mainUrl: MainApiUrl,
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8',
+  },
+});
+
 // для отрисовки карточки
-const card = new Card();
+const card = new Card(mainApi);
 
 // валидация логина
 const validatePopupLogin = new NewFormsValidator('.popup__form', enableButton, disableButton, [
@@ -75,6 +83,8 @@ const searchForm = new NewFormsValidator('.search__form', enableButton, disableB
       const keyword = searchInput.value;
       cardList.clearResults();
       cardList.renderPreloader(preloaderErr, preloaderLoading);
+      card.clearSavedCards();
+      card.takeSavedCards();
       newsApi.getNews(keyword)
         .then((data) => {
           const cards = data.articles.map((item) => (
@@ -180,14 +190,6 @@ const cardList = new NewsCardList('.results', card, showMoreBtn, [
   },
 ]);
 
-// запрос на сервер c бд
-const mainApi = new MainApi({
-  mainUrl: MainApiUrl,
-  headers: {
-    'Content-Type': 'application/json;charset=utf-8',
-  },
-});
-
 // работа с header'ом
 const header = new Header('.header', [
   {
@@ -285,6 +287,11 @@ const popupLogin = new Popup('.popup', [
           .then((data) => {
             localStorage.setItem('jwt', data.jwt);
             popupLogin.close();
+            while (cardsContainer.firstChild) {
+              cardsContainer.removeChild(cardsContainer.firstChild);
+              results.classList.add('results_hide');
+              NewFormsValidator.clearContent(document.forms.searchForm);
+            }
             customPopup('Вы успешно авторизовались :)');
             checkUser(header, mainApi);
           })

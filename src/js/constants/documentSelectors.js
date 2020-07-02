@@ -16,6 +16,7 @@ const preloaderTitle = document.querySelector('.preloader__title');
 const preloaderSubtitle = document.querySelector('.preloader__subtitle');
 const results = document.querySelector('.results');
 const showMoreBtn = document.querySelector('.results__show-more');
+const cardsContainer = document.querySelector('.results__cards-container');
 
 // блок кастомного попапа
 const popupCustom = document.querySelector('.popup-succes');
@@ -43,4 +44,5 @@ export {
   showMoreBtn,
   headerMenu,
   headerBlock,
+  cardsContainer,
 };
