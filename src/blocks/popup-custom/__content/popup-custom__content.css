@@ -1,6 +1,6 @@
-.popup-reg__content {
+.popup-custom__content {
   width: 430px;
-  min-height: 330px;
+  min-height: 180px;
   background-color: #fff;
   border-radius: 10px;
   position: relative;
@@ -9,8 +9,8 @@
 }
 
 @media screen and (max-width: 540px) {
-  .popup-reg__content {
-    height: 560px;
+  .popup-custom__content {
+    height: 200px;
     top: 60px;
   }
 }

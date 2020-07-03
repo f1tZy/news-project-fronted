@@ -37,9 +37,9 @@ export default class NewFormValidator extends BaseComponent {
   validateForm(inputs, message, button) {
     const checkInput = Array.from(inputs);
     let isValid = true;
-    checkInput.forEach((value) => {
-      this._validateInputElement(value, message);
-      if (!value.validity.valid) {
+    checkInput.forEach((input) => {
+      this._validateInputElement(input, message);
+      if (!input.validity.valid) {
         isValid = false;
       }
     });

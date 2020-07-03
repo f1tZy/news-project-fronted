@@ -19,9 +19,8 @@ const showMoreBtn = document.querySelector('.results__show-more');
 const cardsContainer = document.querySelector('.results__cards-container');
 
 // блок кастомного попапа
-const popupCustom = document.querySelector('.popup-succes');
-const popupTitle = document.querySelector('.popup-succes__title');
-const popupLink = document.querySelector('.popup-succes__link');
+const popupCustom = document.querySelector('.popup-custom');
+const popupTitle = document.querySelector('.popup-custom__title');
 
 // блок header
 const headerBlock = document.querySelector('.header');
@@ -40,7 +39,6 @@ export {
   results,
   popupCustom,
   popupTitle,
-  popupLink,
   showMoreBtn,
   headerMenu,
   headerBlock,

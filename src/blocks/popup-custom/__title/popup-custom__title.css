@@ -1,0 +1,11 @@
+.popup-custom__title {
+  margin: 35px 0 15px 0;
+  font-size: 24px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  color: #1A1B22;
+  text-align: center;
+}

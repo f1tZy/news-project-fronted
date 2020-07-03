@@ -83,6 +83,7 @@ const searchForm = new NewFormsValidator('.search__form', enableButton, disableB
       const keyword = searchInput.value;
       cardList.clearResults();
       cardList.renderPreloader(preloaderErr, preloaderLoading);
+      results.classList.add('results_hide');
       card.clearSavedCards();
       card.takeSavedCards();
       newsApi.getNews(keyword)
@@ -321,6 +322,16 @@ const popupSucces = new Popup('.popup-succes', [{
   },
 }]);
 
+// кастомный попап
+const popupCustom = new Popup('.popup-custom', [{
+  event: 'mousedown',
+  callback: (e) => {
+    if (e.target.classList.contains('popup-custom') || e.target.classList.contains('popup-custom__close')) {
+      popupCustom.close(e);
+    }
+  },
+}]);
+
 // проверяем при загрузке залогинен ли пользователь
 checkUser(header, mainApi);
 
@@ -328,4 +339,4 @@ checkUser(header, mainApi);
 checkAuth();
 
 // закрытие попапов на ESC
-popupsCloseOnEsc(popupLogin, popupReg, popupSucces);
+popupsCloseOnEsc(popupLogin, popupReg, popupSucces, popupCustom);
