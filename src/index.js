@@ -84,6 +84,7 @@ const searchForm = new NewFormsValidator('.search__form', enableButton, disableB
       cardList.clearResults();
       cardList.renderPreloader(preloaderErr, preloaderLoading);
       results.classList.add('results_hide');
+      showMoreBtn.classList.remove('results_hide');
       card.clearSavedCards();
       card.takeSavedCards();
       newsApi.getNews(keyword)

@@ -1,4 +1,5 @@
 /* eslint linebreak-style: ["error", "windows"] */
+
 export default class Card {
   constructor(mainApi) {
     this._el = document.querySelector('.results__cards-container');
@@ -42,8 +43,14 @@ export default class Card {
     this._el.querySelector('.card__text').textContent = data.text;
     this._el.querySelector('.card__source').textContent = data.source;
     this._el.querySelector('.card__source').href = data.link;
-    this._el.querySelector('.card__img').src = data.image;
     this._el.querySelector('.card__keyword').textContent = data.keyword;
+
+    // проверяем если с сервера приходит инф-ция без картинки, вставляем картинку 'Изображение не найдено' с нашего сервера
+    if (data.image === null) {
+      this._el.querySelector('.card__img').src = 'https://www.news-project.gq/not_found.jpg';
+    } else {
+      this._el.querySelector('.card__img').src = data.image;
+    }
 
     const date = new Date(data.date);
     this._el.querySelector('.card__date').textContent = `${date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' })}, ${date.getFullYear()}`;
