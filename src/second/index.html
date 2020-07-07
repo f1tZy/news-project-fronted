@@ -16,7 +16,6 @@
     <div class="root">
         <header class="header_black root__section">
             <h1 class="header-title header-title_black">NewsExplorer</h1>
-            <!-- Для просмотра мобильного меню добавить класс header-menu_mobile -->
             <nav>
                 <ul class="header-menu">
                     <li class="header-menu__item"><a class="header-menu__main header-menu_black"
@@ -26,7 +25,6 @@
                             статьи</a></li>
                     <li class="header-menu__item"><button class="button button_black header-menu__button">
                             <span class="header-menu__auth header-menu_black"></span>
-                            <!-- Для отображения значка выхода убрать класс header-menu_hide -->
                             <img class="header-menu__unauth"
                                 src=".<%=require('../images/out_black.svg').default%>" alt="Выйти">
                         </button></li>
@@ -37,86 +35,11 @@
         <div class="saved">
             <h3 class="saved__articles">Сохранённые статьи</h3>
             <h2 class="saved__info"></h2>
-            <p class="saved__keywords">По ключевым словам: <span class="saved__bold">Природа, Тайга</span> и <span class="saved__bold">2 другим</span></p>
+            <p class="saved__keywords">По ключевым словам: <span class="saved__bold"></span> и <span class="saved__bold"></span></p>
         </div>
         <main class="content">
             <section class="results">
-                <div class="results__cards-container">
-                    <!-- <div class="card">
-                        <div class="card__delete"></div>
-                        <p class="card__category">Природа</p>
-                        <p class="card__save">Убрать из сохраненых</p>
-                        <img class="card__img" src=".<%=require('../images/image_1.jpg').default%>"
-                            alt="Изображение карточки">
-                        <div class="card__info">
-                            <p class="card__date">2 августа, 2019</p>
-                            <h2 class="card__title">Национальное достояние – парки</h2>
-                            <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                                складываться система национальных парков – охраняемых территорий, где и сегодня каждый
-                                может приобщиться к природе.</p>
-                            <a class="card__source" href="https://lenta.ru/">Лента.ру</a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="card">
-                        <div class="card__delete"></div>
-                        <p class="card__category">Природа</p>
-                        <p class="card__save">Убрать из сохраненых</p>
-                        <img class="card__img" src=".<%=require('../images/image_2.png').default%>"
-                            alt="Изображение карточки">
-                        <div class="card__info">
-                            <p class="card__date">2 августа, 2019</p>
-                            <h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
-                            <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности
-                                Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                            <a class="card__source" href="https://meduza.io/">Медуза</a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="card">
-                        <div class="card__delete"></div>
-                        <p class="card__category">Природа</p>
-                        <p class="card__save">Убрать из сохраненых</p>
-                        <img class="card__img" src=".<%=require('../images/image_3.png').default%>"
-                            alt="Изображение карточки">
-                        <div class="card__info">
-                            <p class="card__date">2 августа, 2019</p>
-                            <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                            <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать
-                                о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу,
-                                где12312312312312312</p>
-                            <a class="card__source" href="https://ria.ru/">РИА</a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="card">
-                        <div class="card__delete"></div>
-                        <p class="card__category">Природа</p>
-                        <p class="card__save">Убрать из сохраненых</p>
-                        <img class="card__img" src=".<%=require('../images/image_3.png').default%>"
-                            alt="Изображение карточки">
-                        <div class="card__info">
-                            <p class="card__date">2 августа, 2019</p>
-                            <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                            <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать
-                                о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу,
-                                где12312312312312312</p>
-                            <a class="card__source" href="https://ria.ru/">РИА</a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="card">
-                        <div class="card__delete"></div>
-                        <p class="card__category">Природа</p>
-                        <p class="card__save">Убрать из сохраненых</p>
-                        <img class="card__img" src=".<%=require('../images/image_3.png').default%>"
-                            alt="Изображение карточки">
-                        <div class="card__info">
-                            <p class="card__date">2 августа, 2019</p>
-                            <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                            <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать
-                                о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу,
-                                где12312312312312312</p>
-                            <a class="card__source" href="https://ria.ru/">РИА</a>
-                        </div>
-                    </div> -->
-                </div>
+                <div class="results__cards-container"></div>
             </section>
         </main>
         <footer class="footer">

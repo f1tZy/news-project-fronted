@@ -1,4 +1,4 @@
-.popup__close {
+.popup-custom__close {
   width: 26px;
   position: absolute;
   top: -26px;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  .popup__close {
+  .popup-custom__close {
     width: 26px;
     position: absolute;
     top: -45px;

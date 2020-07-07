@@ -15,20 +15,16 @@
 <body>
     <div class="root">
         <div class="background-image">
-            <!-- Для просмотра мобильного меню добавить класс root_black -->
             <header class="header root__section">
                 <h1 class="header-title">NewsExplorer</h1>
                 <nav>
-                    <!-- Для просмотра мобильного меню добавить класс header-menu_mobile -->
                     <ul class="header-menu">
                         <li class="header-menu__item"><a class="header-menu__main active-button"
                                 href="./index.html">Главная</a></li>
-                        <!-- Для отображения ссылки сохраненых статей убрать класс header-menu_hide -->
                         <li class="header-menu__item"><a class="header-menu__saved header-menu_hide"
                                 href="./second/index.html">Сохранённые статьи</a></li>
                         <li class="header-menu__item"><button class="button header-menu__button">
                                 <span class="header-menu__auth">Авторизоваться</span>
-                                <!-- Для отображения значка выхода убрать класс header-menu_hide -->
                                 <img class="header-menu__unauth header-menu_hide"
                                     src="<%=require('./images/out_white.svg').default%>" alt="Выйти">
                             </button>
@@ -41,8 +37,9 @@
                 <h2 class="search__title">Что в мире творится?</h2>
                 <h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном
                     кабинете.</h2>
-                <form class="search__form">
-                    <input type="text" class="search__input" name="search" placeholder="Введите тему новости" required minlength="2">
+                <form class="search__form" name="searchForm">
+                    <input type="text" class="search__input" name="search" placeholder="Введите тему новости" required
+                        minlength="2">
                     <button class="button search__button" enabled>Искать</button>
                     <span class="error error-search">Нужно ввести минимум 2 символа</span>
                 </form>
@@ -50,12 +47,10 @@
         </div>
         <main class="content">
             <section class="preloader">
-                <!-- Для отображения прелоудера убрать класс preloader_hide -->
                 <div class="preloader__loading preloader_hide">
                     <i class="preloader__circle"></i>
                     <h3 class="preloader__message">Идёт поиск новостей...</h3>
                 </div>
-                <!-- Для отображения ошибки прелоудера убрать класс preloader_hide -->
                 <div class="preloader__err preloader_hide">
                     <img class="preloader__not-found" src="<%=require('./images/not-found.svg').default%>"
                         alt="Ничего не найдено">
@@ -63,119 +58,78 @@
                     <h3 class="preloader__subtitle">К сожалению по вашему запросу ничего не найдено</h3>
                 </div>
             </section>
-            <!-- Для отображения блока с картинками убрать класс results_hide -->
             <section class="results results_hide">
                 <h3 class="results__title">Результаты поиска</h3>
-                <div class="results__cards-container">
-                    <!-- <div class="card">
-                        <div class="card__icon card__icon_save"></div>
-                        <p class="card__save">Войдите, чтобы сохранять статьи</p>
-                        <img class="card__img" src="<%=require('./images/image_1.jpg').default%>"
-                            alt="Изображение карточки">
-                        <div class="card__info">
-                            <p class="card__date">2 августа, 2019</p>
-                            <h2 class="card__title">Национальное достояние – парки</h2>
-                            <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                                складываться система национальных парков – охраняемых территорий, где и сегодня каждый
-                                может приобщиться к природе.</p>
-                            <a class="card__source" href="https://lenta.ru/">Лента.ру</a>
-                            <span class="card__keyword">123</span>
-                        </div>
-                    </div> -->
-                    <!-- <div class="card">
-                        <div class="card__icon"></div>
-                        <p class="card__save">Войдите, чтобы сохранять статьи</p>
-                        <img class="card__img" src="<%=require('./images/image_2.png').default%>"
-                            alt="Изображение карточки">
-                        <div class="card__info">
-                            <p class="card__date">2 августа, 2019</p>
-                            <h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
-                            <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности
-                                Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                            <a class="card__source" href="https://meduza.io/">Медуза</a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="card">
-                        <div class="card__icon"></div>
-                        <p class="card__save">Войдите, чтобы сохранять статьи</p>
-                        <img class="card__img" src="<%=require('./images/image_3.png').default%>"
-                            alt="Изображение карточки">
-                        <div class="card__info">
-                            <p class="card__date">2 августа, 2019</p>
-                            <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                            <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать
-                                о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу,
-                                где12312312312312312</p>
-                            <a class="card__source" href="https://ria.ru/">РИА</a>
-                        </div>
-                    </div> -->
-                </div>
+                <div class="results__cards-container"></div>
                 <button class="button results__show-more">Показать ещё</button>
             </section>
             <section class="about">
-                <img class="about__photo" src="<%=require('./images/image_4.png').default%>" alt="author photo">
+                <img class="about__photo" src="<%=require('./images/3.jpg').default%>" alt="author photo">
                 <div class="about__description">
                     <h2 class="about__title">Об авторе</h2>
-                    <p class="about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
-                        чем вы занимаетесь, какими технологиями разработки владеете.</p>
-                    <p class="about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут
-                        научились, и чем можете помочь потенциальным заказчикам.</p>
+                    <p class="about__text">Всем Привет! Это мой учебный проект для поиска и сохранения новостей.
+                        Меня зовут Алексей, люблю программирование, занимаюсь веб-разработкой. Знаю такие технологии как: JavaScript, Node.js,
+                        MongoDB, Webpack, CSS3, HTML5, Git, Bootstrap, VS Code.</p>
+                    <p class="about__text">Также спасибо команде Яндекс.Практикум. Весь этот стек
+                        технологий я выучил благодаря им. Надеюсь вам понравится этот проект :)</p>
                 </div>
             </section>
-            <!-- Для отображения попапа добавить класс popup_is-opened -->
             <div class="popup">
                 <div class="popup__content">
                     <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup__close">
                     <h3 class="popup__title">Вход</h3>
                     <form class="popup__form" name="login">
                         <label class="popup__label">Email</label>
-                        <input type="email" name="email" class="popup__input" placeholder="Введите почту" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,}$" required
-                            minlength="2" maxlength="30">
+                        <input type="email" name="email" class="popup__input" placeholder="Введите почту"
+                            pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,}$" required minlength="2" maxlength="30">
                         <span class="error error-email"></span>
                         <label class="popup__label">Пароль</label>
                         <input type="password" name="pass" class="popup__input" placeholder="Введите пароль" required
                             minlength="8">
                         <span class="error error-pass"></span>
                         <button class="button popup__button popup__button_disabled" disabled="">Войти</button>
-                        <!-- <button class="button popup__button popup__button_disabled" disabled="">Войти</button> -->
                         <span class="popup__switch">или
                             <a class="popup__link" href="#">Зарегистрироваться</a>
                         </span>
                     </form>
                 </div>
             </div>
-            <!-- Для отображения попапа добавить класс popup_is-opened -->
             <div class="popup-reg">
                 <div class="popup-reg__content">
                     <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup-reg__close">
                     <h3 class="popup-reg__title">Регистрация</h3>
                     <form class="popup-reg__form" name="reg">
                         <label class="popup-reg__label">Email</label>
-                        <input type="email" name="emailReg" class="popup-reg__input" placeholder="Введите почту" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,}$" required
-                            minlength="2">
+                        <input type="email" name="emailReg" class="popup-reg__input" placeholder="Введите почту"
+                            pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,}$" required minlength="2">
                         <span class="error error-emailReg"></span>
                         <label class="popup-reg__label">Пароль</label>
                         <input type="password" name="passReg" class="popup-reg__input" placeholder="Введите пароль"
                             required minlength="8">
                         <span class="error error-passReg"></span>
                         <label class="popup-reg__label">Имя</label>
-                        <input type="text" name="username" class="popup-reg__input" placeholder="Введите своё имя" required
-                            minlength="2" maxlength="30">
+                        <input type="text" name="username" class="popup-reg__input" placeholder="Введите своё имя"
+                            required minlength="2" maxlength="30">
                         <span class="error error-username"></span>
-                        <button class="button popup-reg__button popup-reg__button_disabled" disabled=""
-                            >Зарегистрироваться</button>
+                        <button class="button popup-reg__button popup-reg__button_disabled"
+                            disabled="">Зарегистрироваться</button>
                         <span class="popup-reg__switch">или
                             <a class="popup-reg__link" href="#">Войти</a>
                         </span>
                     </form>
                 </div>
             </div>
-            <!-- Для отображения попапа добавить класс popup_is-opened -->
             <div class="popup-succes">
                 <div class="popup-succes__content">
                     <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup-succes__close">
                     <h3 class="popup-succes__title">Пользователь успешно зарегистрирован!</h3>
                     <a class="popup-succes__link" href="#">Выполнить вход</a>
+                </div>
+            </div>
+            <div class="popup-custom">
+                <div class="popup-custom__content">
+                    <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup-custom__close">
+                    <h3 class="popup-custom__title"></h3>
                 </div>
             </div>
         </main>

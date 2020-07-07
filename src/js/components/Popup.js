@@ -9,8 +9,4 @@ export default class Popup extends BaseComponent {
   close() {
     this._element.classList.remove('popup_is-opened');
   }
-
-  static clearContent(form) {
-    form.reset();
-  }
 }

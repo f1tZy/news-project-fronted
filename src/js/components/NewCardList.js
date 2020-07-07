@@ -1,5 +1,6 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import BaseComponent from './BaseComponent';
+import { numberOfCards } from '../constants/magicValues';
 // import customPopup from '../utils/customPopup';
 
 export default class NewsCardList extends BaseComponent {
@@ -8,7 +9,7 @@ export default class NewsCardList extends BaseComponent {
     this._cardsContainer = this._element.querySelector('.results__cards-container');
     this.card = card;
     this._cards = [];
-    this.lastIndex = 3;
+    this.lastIndex = numberOfCards;
     this.showMoreBtn = showMoreBtn;
   }
 
@@ -40,9 +41,9 @@ export default class NewsCardList extends BaseComponent {
   }
 
   getArticlesToRender() {
-    const articlesToRender = this._cards.slice(this.lastIndex, this.lastIndex + 3);
-    this.lastIndex += 3;
-    if (articlesToRender.length < 3) {
+    const articlesToRender = this._cards.slice(this.lastIndex, this.lastIndex + numberOfCards);
+    this.lastIndex += numberOfCards;
+    if (articlesToRender.length < numberOfCards) {
       alert('Новости кончились. Поробуйте поискать что нибудь другое.'); // eslint-disable-line no-alert
       this.showMoreBtn.classList.add('results_hide');
     }

@@ -1,16 +1,7 @@
 /* eslint linebreak-style: ["error", "windows"] */
 
 // блок форм и инпутов
-const loginForm = document.forms.login;// форма карточки
-const inputLoginEmail = document.forms.login.elements.email;
-const inputLoginPass = document.forms.login.elements.pass;
 const loginBtn = document.querySelector('.popup__button');
-
-
-const regForm = document.forms.reg;// форма пользователя
-const inputRegMail = document.forms.reg.elements.emailReg;// инпуты форм для валидатора
-const inputRegPass = document.forms.reg.elements.passReg;
-const inputNameReg = document.forms.reg.elements.username;
 const regBtn = document.querySelector('.popup-reg__button');
 
 // блок поиска
@@ -25,25 +16,18 @@ const preloaderTitle = document.querySelector('.preloader__title');
 const preloaderSubtitle = document.querySelector('.preloader__subtitle');
 const results = document.querySelector('.results');
 const showMoreBtn = document.querySelector('.results__show-more');
+const cardsContainer = document.querySelector('.results__cards-container');
 
 // блок кастомного попапа
-const popupCustom = document.querySelector('.popup-succes');
-const popupTitle = document.querySelector('.popup-succes__title');
-const popupLink = document.querySelector('.popup-succes__link');
+const popupCustom = document.querySelector('.popup-custom');
+const popupTitle = document.querySelector('.popup-custom__title');
 
 // блок header
 const headerBlock = document.querySelector('.header');
 const headerMenu = document.querySelector('.header-menu');
 
 export {
-  loginForm,
-  inputLoginEmail,
-  inputLoginPass,
   loginBtn,
-  regForm,
-  inputRegMail,
-  inputRegPass,
-  inputNameReg,
   regBtn,
   searchErr,
   searchBtn,
@@ -55,8 +39,8 @@ export {
   results,
   popupCustom,
   popupTitle,
-  popupLink,
   showMoreBtn,
   headerMenu,
   headerBlock,
+  cardsContainer,
 };
