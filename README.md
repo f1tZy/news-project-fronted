@@ -15,6 +15,8 @@
 ```sh
 Команды для терминала:
 
+git clone https://github.com/f1tZy/news-project-fronted.git - клонировать проект на локальный компьютер
+
 npm install - установить зависимости.
 
 npm run build - собирает проект в отдельную папку dist.
