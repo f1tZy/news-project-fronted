@@ -51,6 +51,6 @@
     "core-js": "~3.4.1",
     "dateformat": "~3.0.3",
     "eslint-config-airbnb-base": "~14.1.0",
-    "lodash": "~4.17.15"
+    "lodash": "~4.17.19"
   }
 }
